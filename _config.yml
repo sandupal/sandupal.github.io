@@ -1,0 +1,22 @@
+# Site settings. GitHub Pages builds this site with Jekyll automatically.
+title: Sandupal Dutta
+tagline: Ocean scientist and former naval meteorologist
+description: >-
+  Sandupal Dutta, PhD candidate in Earth and Planetary Sciences at Johns Hopkins University
+  and former Commander, Indian Navy. Scientific machine learning for ocean biogeochemistry,
+  Earth system prediction and operational meteorology and oceanography.
+url: "https://sandupal.github.io"
+baseurl: ""
+lang: en
+author:
+  name: Sandupal Dutta
+image: /assets/img/headshot.jpg
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

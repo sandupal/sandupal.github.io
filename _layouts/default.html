@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% assign p = site.data.profile %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ p.name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "image": {{ site.image | absolute_url | jsonify }},
+    "email": {{ p.email | prepend: 'mailto:' | jsonify }},
+    "jobTitle": "PhD Candidate, Earth and Planetary Sciences",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Johns Hopkins University" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Johns Hopkins University" },
+      { "@type": "CollegeOrUniversity", "name": "National Institute of Technology, Durgapur" }
+    ],
+    "knowsAbout": {{ p.interests | jsonify }},
+    "sameAs": [{% assign first = true %}{% for l in p.links %}{% if l.url != "" %}{% unless first %}, {% endunless %}{{ l.url | jsonify }}{% assign first = false %}{% endif %}{% endfor %}]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  {{ content }}
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ p.name }}, {{ p.location }}. <a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+      <p>Last updated {{ site.time | date: "%-d %B %Y" }}.</p>
+    </div>
+  </footer>
+</body>
+</html>

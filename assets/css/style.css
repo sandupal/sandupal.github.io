@@ -1,0 +1,156 @@
+/* Palette: deep-ocean ink, cool paper, chlorophyll teal for links, naval brass for honours. */
+:root {
+  --paper: #f7fafa;
+  --surface: #ffffff;
+  --ink: #142a36;
+  --ink-soft: #4a5f6a;
+  --rule: #d6e1e4;
+  --teal: #146b72;
+  --brass: #8a6a24;
+  --head-bg: #0f2c3d;
+  --head-ink: #f2f7f8;
+  --head-soft: #b9cfd6;
+  --measure: 44rem;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Literata", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1c24;
+    --surface: #12252f;
+    --ink: #e4edf0;
+    --ink-soft: #9fb4bc;
+    --rule: #24404c;
+    --teal: #6cc4c6;
+    --brass: #d2b46a;
+    --head-bg: #08161d;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1c24; --surface: #12252f; --ink: #e4edf0; --ink-soft: #9fb4bc;
+  --rule: #24404c; --teal: #6cc4c6; --brass: #d2b46a; --head-bg: #08161d;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.7 var(--serif);
+}
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 16px; }
+a { color: var(--teal); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-radius: 2px; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 8px; background: var(--surface); padding: 6px 10px; z-index: 2; }
+
+/* Masthead */
+.masthead { background: var(--head-bg); color: var(--head-ink); }
+.masthead-grid {
+  display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: end;
+  padding-top: 56px; padding-bottom: 32px;
+}
+.headshot {
+  width: 160px; height: 202px; object-fit: cover; display: block;
+  border: 3px solid var(--head-ink);
+}
+h1 {
+  font: 700 clamp(2.2rem, 6vw, 3.4rem)/1.02 var(--sans);
+  letter-spacing: -0.02em; margin: 0 0 14px;
+}
+.role { margin: 0; color: var(--head-soft); font: 500 1rem/1.5 var(--sans); }
+.role + .role { margin-top: 2px; }
+
+/* The one bold element: the chlorophyll-a colour scale used on ocean-colour satellite maps. */
+.chl-scale {
+  height: 10px;
+  background: linear-gradient(90deg,
+    #2c0f5c 0%, #233b8f 16%, #1a6fa8 32%, #1aa3a0 48%,
+    #49bb6c 62%, #a6cf3f 76%, #f3d93a 88%, #f59a2b 100%);
+}
+
+/* Sections */
+main { padding-top: 8px; padding-bottom: 48px; }
+section { margin-top: 44px; }
+h2 {
+  font: 600 1.35rem/1.25 var(--sans); margin: 0 0 14px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+}
+h3 { font: 600 1.05rem/1.35 var(--sans); margin: 0; }
+h3.sub { margin-top: 28px; margin-bottom: 8px; }
+p { margin: 0 0 1em; }
+.meta { font: 500 0.875rem/1.4 var(--sans); color: var(--ink-soft); margin: 0 0 2px; }
+.unit { color: var(--ink-soft); margin: 2px 0 6px; }
+ul, ol { padding-left: 1.2em; }
+
+/* Contact */
+.contact-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--sans); margin: 0 0 18px; }
+.availability {
+  border-left: 4px solid var(--teal); background: var(--surface);
+  padding: 12px 16px; font: 500 0.98rem/1.55 var(--sans);
+}
+
+/* Bio */
+.bio p:first-child { font-size: 1.15rem; line-height: 1.65; }
+
+/* Interests */
+.tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.tags li {
+  font: 500 0.875rem/1 var(--sans); padding: 7px 11px;
+  border: 1px solid var(--rule); background: var(--surface); border-radius: 999px;
+}
+
+/* Updates */
+.updates { list-style: none; padding: 0; margin: 0; }
+.updates li { display: grid; grid-template-columns: 9.5rem 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.updates time { font: 500 0.9rem/1.7 var(--sans); color: var(--ink-soft); }
+
+/* Projects */
+.project { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.project:last-child { border-bottom: 0; }
+.project p:last-child { margin-bottom: 0; }
+
+/* Publications and talks */
+.pubs li, .talks li { margin-bottom: 12px; }
+.talks { list-style: none; padding: 0; }
+.talks .meta { display: block; }
+.more { color: var(--ink-soft); }
+
+/* Navy timeline: a real sequence, so a rule with markers is meaningful here. */
+.timeline { list-style: none; padding: 0; margin: 20px 0 0; border-left: 2px solid var(--rule); }
+.timeline > li { position: relative; padding: 0 0 22px 22px; }
+.timeline > li::before {
+  content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px;
+  border-radius: 50%; background: var(--paper); border: 2px solid var(--teal);
+}
+.timeline > li:first-child::before { background: var(--teal); }
+.timeline ul { margin: 4px 0 0; font-size: 0.98rem; line-height: 1.6; }
+.timeline ul li { margin-bottom: 4px; }
+.honours { list-style: none; padding: 0; }
+.honours li { padding-left: 22px; position: relative; margin-bottom: 6px; }
+.honours li::before {
+  content: ""; position: absolute; left: 2px; top: 0.6em; width: 9px; height: 9px;
+  background: var(--brass); transform: rotate(45deg);
+}
+.navy-photo { margin: 24px 0; }
+.navy-photo img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+.navy-photo figcaption { font: 400 0.9rem/1.5 var(--sans); color: var(--ink-soft); margin-top: 8px; }
+
+/* Education */
+.edu { list-style: none; padding: 0; }
+.edu li { margin-bottom: 14px; }
+.note { font-style: italic; color: var(--ink-soft); }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--rule); padding: 24px 0 40px; font: 400 0.9rem/1.5 var(--sans); color: var(--ink-soft); }
+.site-footer p { margin: 0 0 4px; }
+
+/* Phone widths */
+@media (max-width: 560px) {
+  .masthead-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 32px; }
+  .headshot { width: 120px; height: 152px; }
+  .updates li { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

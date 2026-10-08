@@ -1,0 +1,34 @@
+# Key projects. Each: name, years, summary (one or two sentences), url ("" for none).
+- name: Equation discovery for plankton dynamics
+  years: 2022 to present
+  summary: >-
+    A four-stage SciML pipeline that learns basin-specific governing equations for phytoplankton from
+    27 years (1998 to 2025) of Copernicus multi-satellite ocean colour and hands them to the E3SM
+    MARBL biogeochemistry model. The North Atlantic spring-bloom equation holds on held-out years
+    (weak R² 0.82), and every coefficient carries bootstrap confidence intervals.
+  url: ""
+- name: Ecological controls on phytoplankton size classes
+  years: 2022 to 2025
+  summary: >-
+    Explainable machine learning (permutation importance, accumulated local effects and SHAP) applied
+    to SeaWiFS, MODIS and OLCI retrievals to separate ecological signal from algorithmic assumptions.
+  url: https://doi.org/10.1029/2025GB009036
+- name: Testing Earth System Model phytoplankton projections
+  years: 2023 to 2025
+  summary: >-
+    Machine learning shows that the large regional changes in phytoplankton biomass projected by
+    Earth System Models do not reflect realistic responses to a changing climate.
+  url: https://doi.org/10.1029/2025GB008761
+- name: SoilSentinel, NASA Space to Soil Challenge
+  years: 2026
+  summary: >-
+    Pitch Event Runner-Up (team DarwinsLabs). The 364.5M-parameter Prithvi-EO-2.0 foundation model
+    was distilled to a 1.19M-parameter model (307 times smaller) for on-board inference, scoring
+    AUC-PR 0.919 over 146 million pixels.
+  url: https://esto.nasa.gov/nasas-soil-to-ag-challenge-selects-winners/
+- name: Operational machine learning for naval forecasting
+  years: 2014 to 2022
+  summary: >-
+    Machine-learning models for anomalous radar propagation, wave-height downscaling, low-level wind
+    shear, crosswind and rainfall, built for and used in day-to-day Indian Navy operations.
+  url: ""

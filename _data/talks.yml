@@ -1,0 +1,31 @@
+# Talks and posters, newest first.
+- when: December 2025
+  event: NeurIPS 2025, Tackling Climate Change with Machine Learning workshop
+  kind: Paper and poster
+  title: Using machine learning to improve the representation of phytoplankton dynamics in Earth System Models
+  url: https://www.climatechange.ai/papers/neurips2025/106
+- when: June 2025
+  event: Gordon Research Conference
+  kind: Poster
+  title: Machine learning for actionable climate science
+  url: ""
+- when: December 2024
+  event: AGU Fall Meeting 2024
+  kind: Poster
+  title: Interpretable machine learning for phytoplankton size classes
+  url: https://agu.confex.com/agu/agu24/meetingapp.cgi/Paper/1542829
+- when: 2024
+  event: CESM Workshop 2024, NCAR
+  kind: Talk
+  title: ""
+  url: https://www.cesm.ucar.edu/events/351/agenda
+- when: February 2024
+  event: Ocean Sciences Meeting 2024
+  kind: Talk
+  title: Interpretable machine learning for phytoplankton size classes
+  url: https://agu.confex.com/agu/OSM24/meetingapp.cgi/Paper/1491033
+- when: December 2022
+  event: AGU Fall Meeting 2022
+  kind: Poster
+  title: Random Forest interpretation of Earth System Model predictions
+  url: https://ui.adsabs.harvard.edu/abs/2022AGUFMOS32B1023D/abstract

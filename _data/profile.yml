@@ -1,0 +1,62 @@
+# Identity, contact and profile links.
+# Leave a url empty ("") to hide that link on the page.
+name: Sandupal Dutta
+roles:
+  - PhD Candidate, Earth and Planetary Sciences, Johns Hopkins University
+  - Commander, Indian Navy (Retd)
+location: Baltimore, Maryland, USA
+email: sdutta12@jh.edu
+email_alt: sandupal@gmail.com
+availability: Available from early 2027 for research and applied roles in Earth system prediction, ocean and climate science, and operational meteorology.
+cv_url: ""            # e.g. /cv/Sandupal_Dutta_CV.pdf once a CV file is added
+
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=ifo20nMAAAAJ&hl=en
+  - label: GitHub
+    url: https://github.com/sandupal
+  - label: Johns Hopkins profile
+    url: https://eps.jhu.edu/directory/sandupal-dutta/
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/sandupal-d-552a30105/
+
+bio:
+  - >-
+    Sandupal Dutta is a PhD candidate in the Morton K. Blaustein Department of Earth and Planetary
+    Sciences at Johns Hopkins University, advised by Prof. Anand Gnanadesikan with co-advisors
+    Prof. Ján Drgoňa and Prof. Somdatta Goswami. His research uses scientific machine learning (SciML)
+    to learn how phytoplankton respond to their environment from 27 years of multi-satellite
+    ocean-colour observations. The governing equations recovered from the satellite record are returned
+    in a form that an Earth System Model (ESM) can use, instead of as a black box. A Fourier Neural
+    Operator (FNO) emulator, weak-form sparse equation discovery and a physics-informed inverse model
+    were built for this purpose and trained on the NERSC Perlmutter supercomputer. Hence, the work tests
+    the equations inside ocean biogeochemical models directly instead of only tuning their parameters.
+    The doctoral defence is expected in January 2027.
+  - >-
+    Before the PhD, he served for twenty years (2001 to 2022) as a meteorological and oceanographic
+    officer in the Indian Navy, retiring as a Commander. His last appointment was Director of the
+    Meteorological and Oceanographic Data Analysis Centre at Headquarters Southern Naval Command, Kochi,
+    where a team of 60 to 70 produced operational weather, ocean and wave forecasts for about 150 ships
+    and submarines and 300 aircraft. Under his direction, three-dimensional variational (3DVAR) data
+    assimilation was integrated into the Weather Research and Forecasting (WRF) model, which improved
+    forecast skill by 10 to 20%. Earlier appointments included Command Meteorological and Oceanographic
+    Officer at Headquarters Andaman and Nicobar Command, Head of the Department of Meteorology at Naval
+    Air Station Port Blair, and Senior Meteorological Officer on the aircraft carrier INS Viraat.
+  - >-
+    His work combines two decades of operational forecasting with current methods in machine learning.
+    In 2026, his team DarwinsLabs was named a Pitch Event Runner-Up in the NASA Space to Soil Challenge
+    for SoilSentinel, a CubeSat concept that distils the NASA and IBM Prithvi-EO-2.0 geospatial
+    foundation model into a 1.19M-parameter model small enough to run on board.
+
+interests:
+  - Scientific machine learning
+  - Ocean biogeochemistry
+  - Phytoplankton dynamics
+  - Ocean-colour remote sensing
+  - Equation discovery
+  - Neural operators
+  - Earth system modelling
+  - Numerical weather prediction
+  - Data assimilation
+  - Operational oceanography
+  - Geospatial foundation models

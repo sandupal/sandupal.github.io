@@ -1,0 +1,23 @@
+# Latest updates, shown newest first (the page sorts by date).
+# To add an update, copy one block, change the fields, then commit and push.
+#   date:  YYYY-MM-DD (use the 1st of the month if only the month is known)
+#   text:  one or two sentences
+#   url:   optional link ("" for none)
+#   when:  optional display text when the exact day is unknown, e.g. "2025"
+
+- date: 2026-07-17
+  text: SoilSentinel (team DarwinsLabs) named a Pitch Event Runner-Up in the NASA Space to Soil Challenge.
+  url: https://esto.nasa.gov/nasas-soil-to-ag-challenge-selects-winners/
+
+- date: 2025-12-01
+  text: Workshop paper and poster at NeurIPS 2025, Tackling Climate Change with Machine Learning.
+  url: https://www.climatechange.ai/papers/neurips2025/106
+
+- date: 2025-06-01
+  text: Poster at the Gordon Research Conference on machine learning for actionable climate science.
+  url: ""
+
+- date: 2025-01-01
+  text: First-author paper on the ecological controls of phytoplankton size classes published in Global Biogeochemical Cycles.
+  url: https://doi.org/10.1029/2025GB009036
+  when: "2025"

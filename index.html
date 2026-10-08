@@ -1,0 +1,136 @@
+---
+layout: default
+title: Sandupal Dutta
+---
+{% assign p = site.data.profile %}
+{% assign navy = site.data.navy %}
+<header class="masthead">
+  <div class="wrap masthead-grid">
+    <img class="headshot" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Portrait of {{ p.name }}" width="160" height="202">
+    <div>
+      <h1>{{ p.name }}</h1>
+      {% for r in p.roles %}<p class="role">{{ r }}</p>{% endfor %}
+    </div>
+  </div>
+  <div class="chl-scale" role="presentation"></div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section class="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact details</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+      {% for l in p.links %}{% if l.url != "" %}<li><a href="{{ l.url }}" rel="me noopener">{{ l.label }}</a></li>{% endif %}{% endfor %}
+      {% if p.cv_url != "" %}<li><a href="{{ p.cv_url | relative_url }}">Download CV (PDF)</a></li>{% endif %}
+    </ul>
+    <p class="availability">{{ p.availability }}</p>
+  </section>
+
+  <section class="bio" aria-label="Biography">
+    {% for para in p.bio %}<p>{{ para }}</p>{% endfor %}
+  </section>
+
+  <section aria-labelledby="interests-h">
+    <h2 id="interests-h">Research interests</h2>
+    <ul class="tags">{% for i in p.interests %}<li>{{ i }}</li>{% endfor %}</ul>
+  </section>
+
+  <section aria-labelledby="updates-h">
+    <h2 id="updates-h">Latest updates</h2>
+    {% assign ups = site.data.updates | sort: "date" | reverse %}
+    <ol class="updates">
+      {% for u in ups %}
+      <li>
+        <time datetime="{{ u.date | date: '%Y-%m-%d' }}">{% if u.when %}{{ u.when }}{% else %}{{ u.date | date: "%B %Y" }}{% endif %}</time>
+        <span>{% if u.url != "" %}<a href="{{ u.url }}">{{ u.text }}</a>{% else %}{{ u.text }}{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section aria-labelledby="projects-h">
+    <h2 id="projects-h">Key projects</h2>
+    {% for pr in site.data.projects %}
+    <article class="project">
+      <h3>{% if pr.url != "" %}<a href="{{ pr.url }}">{{ pr.name }}</a>{% else %}{{ pr.name }}{% endif %}</h3>
+      <p class="meta">{{ pr.years }}</p>
+      <p>{{ pr.summary }}</p>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section aria-labelledby="pubs-h">
+    <h2 id="pubs-h">Publications</h2>
+    <ol class="pubs">
+      {% for b in site.data.publications.published %}
+      <li>{{ b.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }} ({{ b.year }}). {{ b.title }}. <em>{{ b.venue }}</em>. <a href="https://doi.org/{{ b.doi }}">doi:{{ b.doi }}</a></li>
+      {% endfor %}
+    </ol>
+    <h3 class="sub">In preparation</h3>
+    <ul class="pubs">
+      {% for b in site.data.publications.in_preparation %}
+      <li>{{ b.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}. {{ b.title }}. {{ b.note }}.</li>
+      {% endfor %}
+    </ul>
+    <p class="more">The full list is on <a href="{{ p.links[0].url }}">Google Scholar</a>.</p>
+  </section>
+
+  <section aria-labelledby="talks-h">
+    <h2 id="talks-h">Talks and posters</h2>
+    <ul class="talks">
+      {% for t in site.data.talks %}
+      <li>
+        <span class="meta">{{ t.when }}, {{ t.kind | downcase }}</span>
+        {% if t.url != "" %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}{% if t.title != "" %}: {{ t.title }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="navy" aria-labelledby="navy-h">
+    <h2 id="navy-h">Indian Navy, 2001 to 2022</h2>
+    <p>{{ navy.summary }}</p>
+    <ol class="timeline">
+      {% for t in navy.timeline %}
+      <li>
+        <p class="meta">{{ t.dates }}</p>
+        <h3>{{ t.role }}</h3>
+        <p class="unit">{{ t.unit }}</p>
+        {% if t.points.size > 0 %}<ul>{% for pt in t.points %}<li>{{ pt }}</li>{% endfor %}</ul>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+
+    <h3 class="sub">Honours</h3>
+    <ul class="honours">{% for h in navy.honours %}<li>{{ h }}</li>{% endfor %}</ul>
+
+    {% assign shown_photos = navy.photos | where: "confirmed", true %}
+    {% for ph in shown_photos %}
+    <figure class="navy-photo">
+      <img src="{{ ph.file | relative_url }}" alt="{{ ph.caption }}" loading="lazy">
+      <figcaption>{{ ph.caption }} Photo: <a href="{{ ph.source }}">{{ ph.credit }}</a>.</figcaption>
+    </figure>
+    {% endfor %}
+
+    {% assign shown_media = navy.media | where: "confirmed", true %}
+    {% if shown_media.size > 0 %}
+    <h3 class="sub">Press and official mentions</h3>
+    <ul class="media">{% for m in shown_media %}<li><a href="{{ m.url }}">{{ m.title }}</a>, {{ m.source }}</li>{% endfor %}</ul>
+    {% endif %}
+  </section>
+
+  <section aria-labelledby="edu-h">
+    <h2 id="edu-h">Education</h2>
+    <ul class="edu">
+      {% for e in site.data.education %}
+      <li>
+        <h3>{{ e.degree }}</h3>
+        <p class="unit">{{ e.place }}, {{ e.years }}</p>
+        {% if e.note != "" %}<p class="note">{{ e.note }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</main>

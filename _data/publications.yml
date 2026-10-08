@@ -1,0 +1,22 @@
+# Peer-reviewed papers, newest first. Wrap the owner's name in ** ** to bold it.
+published:
+  - authors: "**Dutta, S.**, & Gnanadesikan, A."
+    year: 2025
+    title: Using machine learning to uncover ecological mechanisms controlling abundance of phytoplankton size classes from large-scale observations
+    venue: Global Biogeochemical Cycles, 39, e2025GB009036
+    doi: 10.1029/2025GB009036
+  - authors: "Gnanadesikan, A., Liu, J., **Dutta, S.**, Feole, B., McCarthy, F., & Qian, J."
+    year: 2025
+    title: Machine learning methods suggest that large regional changes in phytoplankton biomass produced by Earth System Models do not reflect realistic responses to changing climate
+    venue: Global Biogeochemical Cycles, e2025GB008761
+    doi: 10.1029/2025GB008761
+  - authors: "Ombres, E. H., Benway, H., Bisson, K., Larkin, A., Perotti, E. A., Wright-Fairbanks, E., Crosswell, J., **Dutta, S.**, et al."
+    year: 2025
+    title: "Tools in harmony: integrating observations and models for improved understanding of a changing ocean"
+    venue: Oceanography, 38(3)
+    doi: 10.5670/oceanog.2025.e302
+
+in_preparation:
+  - authors: "**Dutta, S.**, Gnanadesikan, A., & Goswami, S."
+    title: Equation discovery for plankton dynamics from the satellite record
+    note: Target submission winter 2026 to 2027

@@ -1,0 +1,66 @@
+# Indian Navy career. Dates follow the filed UNESCO Employment History Form (2026).
+# Items with `confirmed: false` are kept here but NOT shown on the page.
+# Set `confirmed: true` only after checking the item is genuine and shows/names Sandupal.
+
+summary: >-
+  Meteorological and oceanographic officer, Indian Navy, July 2001 to January 2022.
+  Retired as Commander.
+
+timeline:
+  - dates: Jun 2018 to Jan 2022
+    role: Director, Meteorological and Oceanographic Data Analysis Centre
+    unit: Headquarters Southern Naval Command, Kochi
+    points:
+      - Led a centre of 60 to 70 oceanographers, meteorologists, data scientists, software engineers and numerical modellers running WRF-ARW, MOM6 and WaveWatch-III for the fleet.
+      - Integrated 3DVAR assimilation of ship and land observations into WRF, improving forecast skill by 10 to 20%.
+      - Held an annual budget of INR 40 to 50 crore and secured INR 11 crore for in-house high-performance computing.
+      - Coordinated naval relief forecasting in the Kerala floods (2018) and advised the National Disaster Response Force during Cyclone Pabuk (2019).
+  - dates: Jul 2016 to Jun 2018
+    role: Command Meteorological and Oceanographic Officer, Operations Planning
+    unit: Headquarters Andaman and Nicobar Command, Port Blair
+    points:
+      - Gave daily forecast briefings to the Commander-in-Chief and to army, navy and air force commanders.
+      - Directed a CNN-LSTM rainfall model, a radar and sonar performance model, and a wave-height downscaling model used for the tow and mooring of floating docks.
+      - Managed the technical programme for MILAN, a fifteen-nation naval exercise.
+  - dates: Apr 2014 to Jul 2016
+    role: Head, Department of Meteorology
+    unit: Naval Air Station Port Blair
+    points:
+      - Led a 40-person aviation forecasting department serving military and civil flights across the Bay of Bengal and the Strait of Malacca.
+      - Built a support vector machine (SVM) crosswind prediction model from a 30-year record.
+  - dates: Oct 2012 to Apr 2014
+    role: Staff Officer (Meteorology and Oceanography)
+    unit: Headquarters Western Naval Command, Mumbai
+    points:
+      - Forecasting for fleet deployments across the Arabian Sea, Red Sea and Gulf of Aden.
+      - Managed the installation of upper-air sounding systems on 20 warships (INR 7 crore).
+  - dates: Apr 2010 to Oct 2012
+    role: Senior Meteorological Officer
+    unit: INS Viraat (aircraft carrier), Mumbai
+    points: []
+  - dates: Oct 2003 to Apr 2010
+    role: Meteorological Officer, successive appointments
+    unit: Goa; INS Mysore, Mumbai and Delhi; NAS Arakkonam; INS Parundu; Visakhapatnam
+    points:
+      - Built a hybrid WRF and Random Forest thunderstorm and fog model at Visakhapatnam.
+  - dates: Jul 2001 to Sep 2003
+    role: Commissioned; Advanced Meteorology Course
+    unit: India Meteorological Department, Pune, and New Delhi
+    points: []
+
+honours:
+  - National "Swachh Hi Seva" environmental award, Government of India, 2017
+  - Parade Commander, Independence Day Parade, Port Blair, 2014
+  - Member, Indian Navy Himalayan motorcycling expedition team, 2011
+
+# Press and official mentions, and Navy photos. Shown only when confirmed: true.
+# Example entries (add when verified):
+#   media:  - title: ..., url: ..., source: Indian Navy, confirmed: true
+#   photos: - file: /assets/img/navy/NAME.jpg, caption: ..., credit: ..., source: ..., confirmed: true
+media: []
+photos:
+  - file: /assets/img/navy/parade-commander-2014.jpg
+    caption: As Parade Commander, escorting the Lt Governor, Lt Gen A K Singh (Retd), during the parade inspection, Independence Day, Netaji Stadium, Port Blair, 15 August 2014.
+    credit: Directorate of IP&T, Andaman and Nicobar Administration
+    source: http://db.and.nic.in/pressarchives/fileuploaded/file.php?id=150814
+    confirmed: true
