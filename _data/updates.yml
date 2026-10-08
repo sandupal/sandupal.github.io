@@ -4,7 +4,7 @@
 #   text:  one or two sentences
 #   url:   optional link ("" for none)
 #   when:  optional display text when the exact day is unknown, e.g. "2025"
-#   photo / photo_caption: optional image (path under /assets/img/) shown below the update
+#   photo / photo_caption / photo_credit: optional image (path under /assets/img/) shown below the update
 
 - date: 2026-07-17
   text: SoilSentinel (team DarwinsLabs) named a Pitch Event Runner-Up in the NASA Space to Soil Challenge.
@@ -20,6 +20,7 @@
   when: "July 2025"
   photo: /assets/img/cesm-tutorial-2025.jpg
   photo_caption: Participants of the Community Earth System Model (CESM) Tutorial, NCAR Mesa Lab, Boulder, 7 to 11 July 2025.
+  photo_credit: NSF NCAR
 
 - date: 2025-06-01
   text: Poster at the Gordon Research Conference on machine learning for actionable climate science.

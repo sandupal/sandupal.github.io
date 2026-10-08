@@ -45,7 +45,7 @@ title: Sandupal Dutta
         <time datetime="{{ u.date | date: '%Y-%m-%d' }}">{% if u.when %}{{ u.when }}{% else %}{{ u.date | date: "%B %Y" }}{% endif %}</time>
         <div>
           <span>{% if u.url != "" %}<a href="{{ u.url }}">{{ u.text }}</a>{% else %}{{ u.text }}{% endif %}</span>
-          {% if u.photo %}<figure class="update-photo"><img src="{{ u.photo | relative_url }}" alt="{{ u.photo_caption }}" loading="lazy"><figcaption>{{ u.photo_caption }}</figcaption></figure>{% endif %}
+          {% if u.photo %}<figure class="update-photo"><img src="{{ u.photo | relative_url }}" alt="{{ u.photo_caption }}" loading="lazy"><figcaption>{{ u.photo_caption }}{% if u.photo_credit %} Photo: {{ u.photo_credit }}.{% endif %}</figcaption></figure>{% endif %}
         </div>
       </li>
       {% endfor %}
@@ -85,7 +85,7 @@ title: Sandupal Dutta
       {% for t in site.data.talks %}
       <li>
         <span class="meta">{{ t.when }}, {{ t.kind | downcase }}</span>
-        {% if t.url != "" %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}{% if t.title != "" %}: {{ t.title }}{% endif %}
+        {% if t.url != "" %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}{% if t.title != "" %}: {{ t.title }}{% endif %}{% if t.slides %} <span class="extra">(<a href="{{ t.slides }}">slides</a>{% if t.video %}, <a href="{{ t.video }}">recording</a>{% endif %})</span>{% elsif t.video %} <span class="extra">(<a href="{{ t.video }}">recording</a>)</span>{% endif %}
       </li>
       {% endfor %}
     </ul>

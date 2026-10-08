@@ -1,4 +1,4 @@
-# Talks and posters, newest first.
+# Talks and posters, newest first. Optional: slides, video (links shown after the entry).
 - when: December 2025
   event: NeurIPS 2025, Tackling Climate Change with Machine Learning workshop
   kind: Paper and poster
@@ -14,11 +14,13 @@
   kind: Poster
   title: Interpretable machine learning for phytoplankton size classes
   url: https://agu.confex.com/agu/agu24/meetingapp.cgi/Paper/1542829
-- when: 2024
-  event: CESM Workshop 2024, NCAR
+- when: June 2024
+  event: CESM Workshop 2024, NCAR, Biogeochemistry Working Group session
   kind: Talk
-  title: ""
+  title: Using machine learning to uncover ecological mechanisms controlling abundance of phytoplankton size classes from large-scale observations
   url: https://www.cesm.ucar.edu/events/351/agenda
+  slides: https://www.cesm.ucar.edu/sites/default/files/2024-06/2024cesmbgcwgdutta.pdf
+  video: https://www.youtube.com/watch?v=yGtdCBWz_3U
 - when: February 2024
   event: Ocean Sciences Meeting 2024
   kind: Talk
