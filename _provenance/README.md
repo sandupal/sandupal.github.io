@@ -16,6 +16,8 @@ These files preserve the original source so that each image can still be verifie
 | Camera EXIF | NIKON D4, DateTime 2014:08:15 03:44:08 |
 | Identification | Sandupal Dutta, as Parade Commander, standing beside the Lt Governor in the inspection vehicle (confirmed by Sandupal, 2026-10-08) |
 | Retrieved | 2026-10-08 |
+| Wayback Machine (page) | https://web.archive.org/web/20261008142542/http://db.and.nic.in/pressarchives/fileuploaded/file.php?id=150814 |
+| Wayback Machine (image) | https://web.archive.org/web/20261008142614/http://db.and.nic.in/pressarchives/fileuploaded/15081403.jpg (SHA-256 matches) |
 | SHA-256 (image) | `42ad3729a518598e88b4a6a0267958242e76a0f62d818bcf951956adafd8357d` |
 | SHA-256 (page copy) | `4be47852d7552d0b0c36bd0012630c8f22eaaebd9b711c45591758d75f2275ed` |
 

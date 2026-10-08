@@ -109,7 +109,7 @@ title: Sandupal Dutta
     {% for ph in shown_photos %}
     <figure class="navy-photo">
       <img src="{{ ph.file | relative_url }}" alt="{{ ph.caption }}" loading="lazy">
-      <figcaption>{{ ph.caption }} Photo: <a href="{{ ph.source }}">{{ ph.credit }}</a>.</figcaption>
+      <figcaption>{{ ph.caption }} Photo: <a href="{{ ph.source }}">{{ ph.credit }}</a>{% if ph.archive %} (<a href="{{ ph.archive }}">archived copy</a>){% endif %}.</figcaption>
     </figure>
     {% endfor %}
 
