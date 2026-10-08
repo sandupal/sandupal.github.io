@@ -53,7 +53,7 @@ a:hover { text-decoration-thickness: 2px; }
   padding-top: 56px; padding-bottom: 32px;
 }
 .headshot {
-  width: 160px; height: 202px; object-fit: cover; display: block;
+  width: 160px; height: 200px; object-fit: cover; display: block;
   border: 3px solid var(--head-ink);
 }
 h1 {
@@ -150,7 +150,7 @@ ul, ol { padding-left: 1.2em; }
 /* Phone widths */
 @media (max-width: 560px) {
   .masthead-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 32px; }
-  .headshot { width: 120px; height: 152px; }
+  .headshot { width: 120px; height: 150px; }
   .updates li { grid-template-columns: 1fr; gap: 2px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
