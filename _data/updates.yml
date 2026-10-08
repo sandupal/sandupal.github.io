@@ -4,6 +4,7 @@
 #   text:  one or two sentences
 #   url:   optional link ("" for none)
 #   when:  optional display text when the exact day is unknown, e.g. "2025"
+#   photo / photo_caption: optional image (path under /assets/img/) shown below the update
 
 - date: 2026-07-17
   text: SoilSentinel (team DarwinsLabs) named a Pitch Event Runner-Up in the NASA Space to Soil Challenge.
@@ -16,6 +17,13 @@
 - date: 2025-06-01
   text: Poster at the Gordon Research Conference on machine learning for actionable climate science.
   url: ""
+
+- date: 2025-05-12
+  text: Participated in the Princeton University and NOAA GFDL node of the WCRP Global km-Scale Hackathon, which focused on GFDL's X-SHiELD kilometre-scale simulations.
+  url: https://cimes.princeton.edu/princeton-university-geophysical-fluid-dynamics-laboratory-global-km-scale-hackathon-0
+  when: "May 2025"
+  photo: /assets/img/gfdl-km-scale-hackathon-2025.jpg
+  photo_caption: Participants of the Princeton University and GFDL Global km-Scale Hackathon, Forrestal Campus, Princeton, 12 to 16 May 2025.
 
 - date: 2025-01-01
   text: First-author paper on the ecological controls of phytoplankton size classes published in Global Biogeochemical Cycles.

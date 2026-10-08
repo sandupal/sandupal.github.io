@@ -107,6 +107,10 @@ ul, ol { padding-left: 1.2em; }
 .updates li { display: grid; grid-template-columns: 9.5rem 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
 .updates time { font: 500 0.9rem/1.7 var(--sans); color: var(--ink-soft); }
 
+.update-photo { margin: 10px 0 4px; }
+.update-photo img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+.update-photo figcaption { font: 400 0.875rem/1.5 var(--sans); color: var(--ink-soft); margin-top: 6px; }
+
 /* Projects */
 .project { padding: 14px 0; border-bottom: 1px solid var(--rule); }
 .project:last-child { border-bottom: 0; }

@@ -43,7 +43,10 @@ title: Sandupal Dutta
       {% for u in ups %}
       <li>
         <time datetime="{{ u.date | date: '%Y-%m-%d' }}">{% if u.when %}{{ u.when }}{% else %}{{ u.date | date: "%B %Y" }}{% endif %}</time>
-        <span>{% if u.url != "" %}<a href="{{ u.url }}">{{ u.text }}</a>{% else %}{{ u.text }}{% endif %}</span>
+        <div>
+          <span>{% if u.url != "" %}<a href="{{ u.url }}">{{ u.text }}</a>{% else %}{{ u.text }}{% endif %}</span>
+          {% if u.photo %}<figure class="update-photo"><img src="{{ u.photo | relative_url }}" alt="{{ u.photo_caption }}" loading="lazy"><figcaption>{{ u.photo_caption }}</figcaption></figure>{% endif %}
+        </div>
       </li>
       {% endfor %}
     </ol>
