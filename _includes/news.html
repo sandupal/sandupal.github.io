@@ -1,0 +1,9 @@
+{%- comment -%} One news row. Pass the update as `u`. {%- endcomment -%}
+{%- assign u = include.u -%}
+<tr>
+  <th scope="row"><time datetime="{{ u.date | date: '%Y-%m-%d' }}">{% if u.when %}{{ u.when }}{% else %}{{ u.date | date: "%b %-d, %Y" }}{% endif %}</time></th>
+  <td>
+    {% if u.url != "" %}<a href="{{ u.url }}">{{ u.text }}</a>{% else %}{{ u.text }}{% endif %}
+    {% if u.photo %}<figure class="news-photo"><img src="{{ u.photo | relative_url }}" alt="{{ u.photo_caption }}" loading="lazy"><figcaption>{{ u.photo_caption }}{% if u.photo_credit %} Photo: {{ u.photo_credit }}.{% endif %}</figcaption></figure>{% endif %}
+  </td>
+</tr>

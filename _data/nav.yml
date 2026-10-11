@@ -1,0 +1,9 @@
+# Top navigation, in order. `url` is the page permalink.
+- title: about
+  url: /
+- title: publications
+  url: /publications/
+- title: research
+  url: /research/
+- title: experience
+  url: /experience/

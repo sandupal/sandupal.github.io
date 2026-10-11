@@ -30,11 +30,27 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  {{ content }}
+  <header class="site-nav">
+    <nav class="wrap nav-inner" aria-label="Main">
+      <a class="nav-name" href="{{ '/' | relative_url }}"><strong>Sandupal</strong> Dutta</a>
+      <ul class="nav-links">
+        {% for item in site.data.nav %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+        {% if p.cv_url != "" %}<li><a href="{{ p.cv_url | relative_url }}">cv</a></li>{% endif %}
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    {{ content }}
+  </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>{{ p.name }}, {{ p.location }}. <a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
-      <p>Last updated {{ site.time | date: "%-d %B %Y" }}.</p>
+      <ul class="social">
+        <li><a href="mailto:{{ p.email }}" title="Email" aria-label="Email">{% include icon.html name="email" %}</a></li>
+        {% for l in p.links %}{% if l.url != "" %}<li><a href="{{ l.url }}" rel="me noopener" title="{{ l.label }}" aria-label="{{ l.label }}">{% include icon.html name=l.label %}</a></li>{% endif %}{% endfor %}
+      </ul>
+      <p>&copy; {{ site.time | date: "%Y" }} {{ p.name }}. Last updated {{ site.time | date: "%-d %B %Y" }}.</p>
     </div>
   </footer>
 </body>

@@ -1,0 +1,61 @@
+---
+layout: default
+title: Experience
+permalink: /experience/
+---
+{% assign navy = site.data.navy %}
+<header class="page-head">
+  <h1>experience</h1>
+  <p class="desc">{{ navy.summary }}</p>
+</header>
+
+<section aria-labelledby="navy-h">
+  <h2 id="navy-h">indian navy, 2001 to 2022</h2>
+  <ol class="timeline">
+    {% for t in navy.timeline %}
+    <li>
+      <p class="tl-dates">{{ t.dates }}</p>
+      <div>
+        <h3>{{ t.role }}</h3>
+        <p class="unit">{{ t.unit }}</p>
+        {% if t.points.size > 0 %}<ul>{% for pt in t.points %}<li>{{ pt }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+
+  {% assign shown_photos = navy.photos | where: "confirmed", true %}
+  {% for ph in shown_photos %}
+  <figure class="wide-photo">
+    <img src="{{ ph.file | relative_url }}" alt="{{ ph.caption }}" loading="lazy">
+    <figcaption>{{ ph.caption }} Photo: <a href="{{ ph.source }}">{{ ph.credit }}</a>{% if ph.archive %} (<a href="{{ ph.archive }}">archived copy</a>){% endif %}.</figcaption>
+  </figure>
+  {% endfor %}
+</section>
+
+<section aria-labelledby="hon-h">
+  <h2 id="hon-h">honours</h2>
+  <ul class="plain">{% for h in navy.honours %}<li>{{ h }}</li>{% endfor %}</ul>
+
+  {% assign shown_media = navy.media | where: "confirmed", true %}
+  {% if shown_media.size > 0 %}
+  <h3>Press and official mentions</h3>
+  <ul class="plain">{% for m in shown_media %}<li><a href="{{ m.url }}">{{ m.title }}</a>, {{ m.source }}</li>{% endfor %}</ul>
+  {% endif %}
+</section>
+
+<section aria-labelledby="edu-h">
+  <h2 id="edu-h">education</h2>
+  <ol class="timeline">
+    {% for e in site.data.education %}
+    <li>
+      <p class="tl-dates">{{ e.years }}</p>
+      <div>
+        <h3>{{ e.degree }}</h3>
+        <p class="unit">{{ e.place }}</p>
+        {% if e.note != "" %}<p class="note">{{ e.note }}</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

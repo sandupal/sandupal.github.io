@@ -1,22 +1,49 @@
 # Peer-reviewed papers, newest first. Wrap the owner's name in ** ** to bold it.
+# Optional keys:
+#   abbr:     short journal badge shown when there is no thumbnail (e.g. GBC)
+#   thumb:    image path, e.g. /assets/img/pubs/name.png (replaces the badge)
+#   selected: true to list the paper under "selected publications" on the home page
+#   abstract: shown by the Abs button (copy the published abstract; leave out if unknown)
+#   journal, volume, issue, article: used to build the Bib entry
+#   pdf, code: optional links
 published:
   - authors: "**Dutta, S.**, & Gnanadesikan, A."
-    year: 2025
+    year: 2026
     title: Using machine learning to uncover ecological mechanisms controlling abundance of phytoplankton size classes from large-scale observations
-    venue: Global Biogeochemical Cycles, 39, e2025GB009036
+    venue: Global Biogeochemical Cycles, 40(4), e2025GB009036
+    journal: Global Biogeochemical Cycles
+    volume: 40
+    issue: 4
+    article: e2025GB009036
     doi: 10.1029/2025GB009036
+    abbr: GBC
+    selected: true
+    abstract: "Phytoplankton size classes (PSCs) and Phytoplankton functional types (PFTs) determine many fundamental biogeochemical processes including nutrient uptake, energy transfer through marine food webs, ocean carbon export, and gas exchange with the atmosphere. Discerning the causes of spatio‐temporal variability of PSCs is a scientific priority for understanding the ocean's role in and response to climate change. This study intends to decipher the relationships between the abundance of PSCs and environmental predictors using explainable machine learning (XAI) techniques. The target variables were PSCs obtained using three different satellite products: size‐resolved phytoplankton carbon from Kostadinov, Milutinović, et al. (2016), https://doi.org/10.5194/os‐12‐561‐2016 , chlorophyll from MODIS divided according to the algorithm of Hirata et al. (2011), https://doi.org/10.5194/bg‐8‐311‐2011 , and a third product from the Copernicus Marine Service. The environmental predictors were nutrients, light, mixed layer depth, salinity, sea surface temperature (sst), and upwelling. The ML algorithm used was the Random Forest Regressor (RFR). XAI techniques were used to discern the relationship between predictors and PSCs abundance. About 85%–95% of the variability of the size classes in the observational data sets was accounted for by environmental variables known to influence phytoplankton biomass. Although different size classes responded similarly to the environmental drivers (with the exception of Copernicus picoplankton) their scale of response varied. The dominant predictors were found to be shortwave radiation, ammonia, dissolved iron and sea surface temperature. The different satellite products show sensitivity to iron, shortwave radiation, sst and ammonia across the same range of values, but with different magnitudes. Copernicus picoplankton is the only product which is positively related to sst."
   - authors: "Gnanadesikan, A., Liu, J., **Dutta, S.**, Feole, B., McCarthy, F., & Qian, J."
     year: 2025
     title: Machine learning methods suggest that large regional changes in phytoplankton biomass produced by Earth System Models do not reflect realistic responses to changing climate
-    venue: Global Biogeochemical Cycles, e2025GB008761
+    venue: Global Biogeochemical Cycles, 39(10), e2025GB008761
+    journal: Global Biogeochemical Cycles
+    volume: 39
+    issue: 10
+    article: e2025GB008761
     doi: 10.1029/2025GB008761
+    abbr: GBC
+    selected: true
+    abstract: "Surface phytoplankton biomass (measured in mol C m −3 ) represents a critical parameter within the Earth System that is measured from space and simulated in Earth System Models. Under climate change, the current generation of Earth System Models agrees that low‐latitude biomass will decline and high‐latitude biomass will increase. However, on a regional scale, the magnitude, phenology and spatial pattern of these changes are highly inconsistent across models. We use machine learning to investigate the sources of the divergence and evaluate the realism of the simulations. We train Random Forests driven by environmental drivers to simulate surface phytoplankton biomass under both pre‐industrial control and SSP5‐8.5 scenarios. Outside the Arctic, the bulk of the changes in biomass are driven by rearrangements in the spatiotemporal distribution of environmental predictors. Large regional changes in models, however, are associated either with unrealistically low pre‐industrial levels of macronutrients or unrealistically strong responses to those macronutrients. Within the Arctic, relationships between environmental predictors and biomass change under global warming. While increased light drives increased biomass, the effect is largest in models with a high nutrient bias. Feeding inputs from an ensemble of models to an emulator trained on observations predicts observed biomass better than the ensemble of the models does, highlighting the fact that models do not produce the correct relationships between environmental predictors and biomass. However, this technique does not yield mechanistically consistent predictions of biomass under climate change. Skepticism of large regional changes in surface phytoplankton biomass produced by individual models is warranted."
   - authors: "Ombres, E. H., Benway, H., Bisson, K., Larkin, A., Perotti, E. A., Wright-Fairbanks, E., Crosswell, J., **Dutta, S.**, et al."
     year: 2025
     title: "Tools in harmony: integrating observations and models for improved understanding of a changing ocean"
     venue: Oceanography, 38(3)
+    journal: Oceanography
+    volume: 38
+    issue: 3
     doi: 10.5670/oceanog.2025.e302
+    abbr: Oceanog.
+    selected: true
 
 in_preparation:
   - authors: "**Dutta, S.**, Gnanadesikan, A., & Goswami, S."
     title: Equation discovery for plankton dynamics from the satellite record
     note: Target submission winter 2026 to 2027
+    abbr: In prep.

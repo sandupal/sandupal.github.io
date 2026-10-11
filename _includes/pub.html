@@ -1,0 +1,40 @@
+{%- comment -%}
+One publication entry, al-folio style. Pass the entry as `b`.
+Fields: authors, year, title, venue, doi, abbr, thumb, abstract, pdf, code, journal, volume, issue, article.
+{%- endcomment -%}
+{%- assign b = include.b -%}
+{%- assign first = b.authors | remove: "**" | split: "," | first | strip -%}
+{%- assign word = b.title | split: " " | first | downcase | remove: '"' -%}
+{%- assign key = first | append: b.year | append: word -%}
+{%- capture bibauthors -%}{{ b.authors | remove: "**" | replace: ", &", "," | replace: "., ", ". and " | replace: "and et al.", "and others" }}{%- endcapture -%}
+<li class="pub">
+  <div class="pub-badge">
+    {%- if b.thumb -%}<img src="{{ b.thumb | relative_url }}" alt="" loading="lazy">
+    {%- elsif b.abbr -%}<span class="abbr">{{ b.abbr }}</span>{%- endif -%}
+  </div>
+  <div class="pub-body">
+    <p class="pub-title">{{ b.title }}</p>
+    <p class="pub-authors">{{ b.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+    <p class="pub-venue">{% if b.venue %}<em>{{ b.venue }}</em>{% endif %}{% if b.year %}, {{ b.year }}{% endif %}{% if b.note %}{% if b.venue %}. {% endif %}{{ b.note }}{% endif %}</p>
+    <div class="pub-links">
+      {%- if b.abstract -%}
+      <details><summary>Abs</summary><div class="pub-panel"><p>{{ b.abstract }}</p></div></details>
+      {%- endif -%}
+      {%- if b.doi -%}
+      <details><summary>Bib</summary><div class="pub-panel"><pre><code>@article{ {{- key -}},
+  author  = { {{- bibauthors -}} },
+  title   = { {{- b.title -}} },
+  journal = { {{- b.journal | default: b.venue -}} },
+  year    = { {{- b.year -}} },{% if b.volume %}
+  volume  = { {{- b.volume -}} },{% endif %}{% if b.issue %}
+  number  = { {{- b.issue -}} },{% endif %}{% if b.article %}
+  pages   = { {{- b.article -}} },{% endif %}
+  doi     = { {{- b.doi -}} }
+}</code></pre></div></details>
+      <a class="btn" href="https://doi.org/{{ b.doi }}">DOI</a>
+      {%- endif -%}
+      {%- if b.pdf -%}<a class="btn" href="{{ b.pdf | relative_url }}">PDF</a>{%- endif -%}
+      {%- if b.code -%}<a class="btn" href="{{ b.code }}">Code</a>{%- endif -%}
+    </div>
+  </div>
+</li>

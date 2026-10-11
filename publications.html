@@ -1,0 +1,45 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+{% assign p = site.data.profile %}
+<header class="page-head">
+  <h1>publications</h1>
+  <p class="desc">Peer-reviewed papers, work in preparation, and talks and posters. The full list is on <a href="{{ p.links[0].url }}">Google Scholar</a>.</p>
+</header>
+
+<section aria-labelledby="peer-h">
+  <h2 id="peer-h">peer-reviewed</h2>
+  {% assign pubs = site.data.publications.published %}
+  {% assign years = pubs | map: "year" | uniq %}
+  {% for y in years %}
+  <h3 class="year">{{ y }}</h3>
+  <ol class="pubs">
+    {% for b in pubs %}{% if b.year == y %}{% include pub.html b=b %}{% endif %}{% endfor %}
+  </ol>
+  {% endfor %}
+</section>
+
+<section aria-labelledby="prep-h">
+  <h2 id="prep-h">in preparation</h2>
+  <ol class="pubs">
+    {% for b in site.data.publications.in_preparation %}{% include pub.html b=b %}{% endfor %}
+  </ol>
+</section>
+
+<section aria-labelledby="talks-h">
+  <h2 id="talks-h">talks and posters</h2>
+  <ul class="talks">
+    {% for t in site.data.talks %}
+    <li>
+      <span class="talk-when">{{ t.when }}</span>
+      <div>
+        <p class="pub-title">{{ t.title }}</p>
+        <p class="pub-venue">{{ t.kind }}, {% if t.url != "" %}<a href="{{ t.url }}">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}</p>
+        {% if t.slides or t.video %}<div class="pub-links">{% if t.slides %}<a class="btn" href="{{ t.slides }}">Slides</a>{% endif %}{% if t.video %}<a class="btn" href="{{ t.video }}">Video</a>{% endif %}</div>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

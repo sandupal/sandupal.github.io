@@ -1,0 +1,23 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+{% assign p = site.data.profile %}
+<header class="page-head">
+  <h1>research</h1>
+  <p class="desc">Scientific machine learning for ocean biogeochemistry, and operational machine learning from two decades of naval forecasting.</p>
+</header>
+
+<div class="projects">
+  {% for pr in site.data.projects %}
+  <article class="card">
+    {% if pr.image %}<img class="card-img" src="{{ pr.image | relative_url }}" alt="{{ pr.image_alt }}" loading="lazy">{% endif %}
+    <div class="card-body">
+      <h2 class="card-title">{% if pr.url != "" %}<a href="{{ pr.url }}">{{ pr.name }}</a>{% else %}{{ pr.name }}{% endif %}</h2>
+      <p class="card-meta">{{ pr.years }}</p>
+      <p>{{ pr.summary }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
