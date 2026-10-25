@@ -7,7 +7,7 @@ These files preserve the original source so that each image can still be verifie
 
 | Field | Value |
 |---|---|
-| Published as | `assets/img/navy/parade-commander-2014.jpg` (byte-identical to `15081403.jpg` here) |
+| Published as | `assets/img/navy/parade-commander-2014.jpg` (byte-identical to the original `15081403.jpg`; the duplicate copy kept here was removed on 2026-10-24) |
 | Original file | `15081403.jpg`, 1024 × 679 px, JPEG |
 | Original URL | http://db.and.nic.in/pressarchives/fileuploaded/15081403.jpg |
 | Source page | http://db.and.nic.in/pressarchives/fileuploaded/file.php?id=150814 (copy: `an-admin-press-release-2014-08-15.html`) |
@@ -21,4 +21,4 @@ These files preserve the original source so that each image can still be verifie
 | SHA-256 (image) | `42ad3729a518598e88b4a6a0267958242e76a0f62d818bcf951956adafd8357d` |
 | SHA-256 (page copy) | `4be47852d7552d0b0c36bd0012630c8f22eaaebd9b711c45591758d75f2275ed` |
 
-Verify a copy with `shasum -a 256 15081403.jpg`.
+Verify the published copy with `shasum -a 256 assets/img/navy/parade-commander-2014.jpg`; it matches the image SHA-256 above.
